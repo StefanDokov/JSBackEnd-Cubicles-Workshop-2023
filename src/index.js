@@ -6,6 +6,7 @@ const setupViewEnigne = require('./config/viewEngine');
 const app = express();
 setupViewEnigne(app);
 
+app.use(express.static('src/public'));
 app.get('/', (req, res) => {
     res.send('home page');
 });
