@@ -1,7 +1,10 @@
 
 const express = require('express');
 const config = require('./config');
+const setupViewEnigne = require('./config/viewEngine');
+
 const app = express();
+setupViewEnigne(app);
 
 app.get('/', (req, res) => {
     res.send('home page');
