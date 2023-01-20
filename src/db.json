@@ -1,0 +1,10 @@
+{
+  "cubes": [
+    {
+      "name": "super",
+      "descripton": "super",
+      "imageUrl": "https://classteaching.files.wordpress.com/2019/09/rubiks-cube.jpg",
+      "difficultyLevel": "1"
+    }
+  ]
+}
