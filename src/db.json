@@ -1,11 +1,25 @@
 {
   "cubes": [
-    {  
-      "id" : 1,
+    {
+      "id": 1,
       "name": "super",
       "descripton": "super",
       "imageUrl": "https://classteaching.files.wordpress.com/2019/09/rubiks-cube.jpg",
       "difficultyLevel": "1"
+    },
+    {
+      "name": "dsaads",
+      "descripton": "dsadas",
+      "imageUrl": "https://classteaching.files.wordpress.com/2019/09/rubiks-cube.jpg",
+      "difficultyLevel": "4",
+      "id": 2
+    },
+    {
+      "name": "dsasda",
+      "descripton": "asdsda",
+      "imageUrl": "https://classteaching.files.wordpress.com/2019/09/rubiks-cube.jpg",
+      "difficultyLevel": "6",
+      "id": 3
     }
   ]
 }
