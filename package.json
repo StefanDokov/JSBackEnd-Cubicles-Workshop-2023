@@ -1,0 +1,24 @@
+{
+  "name": "jsbackend-cubicles-workshop-2023",
+  "version": "1.0.0",
+  "description": "Workshop Task During My Time in SoftUni",
+  "main": "src/index.js",
+  "scripts": {
+    "staqrt": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanDokov/JSBackEnd-Cubicles-Workshop-2023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefanDokov/JSBackEnd-Cubicles-Workshop-2023/issues"
+  },
+  "homepage": "https://github.com/StefanDokov/JSBackEnd-Cubicles-Workshop-2023#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
