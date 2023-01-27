@@ -30,7 +30,9 @@ exports.getDetails = async (req, res) => {
 exports.getAttachAccessory = async (req, res) => {
 
     const cube = await Cube.findById(req.params.cubeId).lean();
-    const accessories = await Accessories.find().lean();
+    const accessories = await Accessories.find({
+        _id: {$nin: cube.accessories}
+    }).lean();
     res.render('cube/attach', { cube, accessories });
 } 
 
