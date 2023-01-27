@@ -13,6 +13,7 @@ const accessoriesSchema = new mongoose.Schema({
       imageUrl: {
         type: String,
         required: true,
+        match: [/^https?:\/\//, 'Invalid URL'],
 
       }
 });
