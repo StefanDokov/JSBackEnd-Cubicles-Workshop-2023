@@ -15,19 +15,14 @@ exports.postCreateCube = async(req, res) => {
     res.redirect('/');
 }
 
-exports.getDetails = (req, res) => {
-     let cubeid = Number(req.params.cubeId);
-
-     if (!cubeid) {
-        return res.redirect('/404');
-     }
-     
-     let cube = db.cubes.find(x => x.id == cubeid);
+exports.getDetails = async (req, res) => {
+    
+    const cube = await Cube.findById(req.params.cubeId).lean();
 
      if(!cube) {
         return res.redirect('/404');
      }
 
-     res.render('details', {cube});
+     res.render('details', { cube });
 
 }
