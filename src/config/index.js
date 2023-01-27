@@ -3,7 +3,8 @@ const config = {
         PORT: 1234
     },
     development: {
-        PORT: 5000
+        PORT: 5000,
+        connectionString: 'mongodb://127.0.0.1:27017/cubicle',
     }
 }
 
