@@ -1,12 +1,11 @@
-const router = require('express').Router();
+
 const authManager = require('../managers/authManager');
-const { route } = require('./accessoryController');
 
-router.get('/login', (req, res) => {
+exports.getLoginPage = (req, res) => {
     res.render('auth/login');
-});
+}
 
-router.post('/login', async(req, res) => {
+exports.postLoginPage = async(req, res) => {
     const {username, password } = req.body;
     try{
     const token = await authManager.login(username, password);
@@ -18,13 +17,13 @@ router.post('/login', async(req, res) => {
     }
     
     res.redirect('/');
-});
+}
 
-router.get('/register', (req, res) => {
+exports.getRegisterPage = (req, res) => {
     res.render('auth/register');
-});
+}
 
-router.post('/register', async (req, res) => {
+exports.postRegisterPage = async (req, res) => {
    const {username, password, repeatPassword} = req.body;
 
    if (password !== repeatPassword) {
@@ -42,7 +41,4 @@ router.post('/register', async (req, res) => {
 
       res.redirect('/login');
 
-});
-
-
-module.exports = router;
+}

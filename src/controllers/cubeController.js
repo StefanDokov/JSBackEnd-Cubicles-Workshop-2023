@@ -4,7 +4,7 @@ const cubeManager = require('../managers/cubeManager');
 const cubeUtils = require('../utils/cubeUtils');
 
 exports.getCreateCube = (req, res) => {
-    res.render('create');
+    res.render('cube/create');
 }
 
 exports.postCreateCube = async(req, res) => {
@@ -81,5 +81,7 @@ exports.getDeleteCube = async (req, res) => {
 }
 
 exports.postDeleteCube = async (req, res) => {
-    
+    await cubeManager.delete(req.params.cubeId);
+
+    res.redirect('/');
 }

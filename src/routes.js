@@ -11,7 +11,10 @@ router.get('/', homeController.getHomePage);
 router.get('/about', homeController.getAboutPage);
 router.get('/404', homeController.getErrorPage);
 
-router.use('/', authController);
+router.get('/login', authController.getLoginPage);
+router.post('/login', authController.postLoginPage);
+router.get('/register', authController.getRegisterPage);
+router.get('/register', authController.postRegisterPage);
 
 router.get('/cubes/create', isAuthenticated, cubeController.getCreateCube);
 router.post('/cubes/create', isAuthenticated, cubeController.postCreateCube);
