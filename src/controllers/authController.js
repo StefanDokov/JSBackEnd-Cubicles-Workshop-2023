@@ -10,7 +10,8 @@ router.post('/login', async(req, res) => {
     const {username, password } = req.body;
     try{
     const token = await authManager.login(username, password);
-    
+    res.cookie('auth', token, {httpOnly: true});
+
     } catch(err) {
         console.log(err);
         return res.redirect('/404');
