@@ -14,3 +14,6 @@ exports.generateDifficultyLevels = (currentLevel) =>{
    return result;
 }
 
+exports.isOwner = (user, cube) => {
+  return cube.owner == user._id;
+}
