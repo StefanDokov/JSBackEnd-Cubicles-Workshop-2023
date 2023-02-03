@@ -3,12 +3,15 @@ const Router = express.Router;
 const cubeController = require('./controllers/cubeController');
 const homeController = require('./controllers/homeController');
 const accesoryController = require('./controllers/accessoryController');
+const authController = require('./controllers/authController');
 
 const router = Router();
 
 router.get('/', homeController.getHomePage);
 router.get('/about', homeController.getAboutPage);
 router.get('/404', homeController.getErrorPage);
+
+router.use('/', authController);
 
 router.get('/cubes/create', cubeController.getCreateCube);
 router.post('/cubes/create', cubeController.postCreateCube);
