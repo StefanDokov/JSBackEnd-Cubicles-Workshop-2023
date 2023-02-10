@@ -4,10 +4,12 @@ const cubeSchema = new mongoose.Schema({
       name: {
         type: String,
         required: true,
+        minLength: 5
       },
       description: {
         type: String,
         required: true,
+        minLength: 20,
         maxLength: 250,
       },
       imageUrl: {

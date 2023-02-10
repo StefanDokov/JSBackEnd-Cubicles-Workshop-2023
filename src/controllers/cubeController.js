@@ -60,7 +60,7 @@ exports.getEditCube = async (req, res) => {
     const difficultyLevels = cubeUtils.generateDifficultyLevels(cube.difficultyLevel);
     
     if (!cubeUtils.isOwner(req.user._id, cube)) {
-       return  res.redirect('/404');
+       throw new Error('You are not an owner!');
     }
     res.render('cube/edit', {cube, difficultyLevels});
 }
@@ -86,7 +86,7 @@ exports.getDeleteCube = async (req, res) => {
     const difficultyLevels = cubeUtils.generateDifficultyLevels(cube.difficultyLevel);
     
     if (!cubeUtils.isOwner(req.user._id, cube)) {
-        return  res.redirect('/404');
+        throw new Error('You are not an owner!');
      }
     res.render('cube/delete', {cube, difficultyLevels});
 }
